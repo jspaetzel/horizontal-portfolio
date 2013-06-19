@@ -19,6 +19,14 @@ data = [
 		"About"
 		]
 
+function adjustStyle(width) {
+    width = parseInt(width);
+    if (width < 701) {
+        $("#size-stylesheet").attr("href", "../css/narrow.css");
+    } else {
+       $("#size-stylesheet").attr("href", "../css/wide.css"); 
+    }
+}
 
 /*global Sly, console */
 jQuery(function ($) {
@@ -30,6 +38,7 @@ jQuery(function ($) {
 			smart: 1,
 			activateOn: 'click',
 			activateMiddle: 1,
+                        dragSource: '#crazy',
 			mouseDragging: 1,
 			touchDragging: 1,
 			releaseSwing: 1,
@@ -73,4 +82,16 @@ jQuery(function ($) {
 	
 	// Initiate frame
 	frame.init();
+
+        // Reload on resize
+	$(window).on('resize', function () {
+		frame.reload();
+                adjustStyle($(this).width());
+	});
+
+});
+
+
+$(window).ready(function() {
+  adjustStyle($(this).width());
 });
