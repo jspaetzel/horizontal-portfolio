@@ -22,10 +22,16 @@ data = [
 function adjustStyle(width) {
     width = parseInt(width);
     if (width < 701) {
-        $("#size-stylesheet").attr("href", "../css/narrow.css");
+        $("#size-stylesheet").attr("href", "css/narrow.css");
     } else {
-       $("#size-stylesheet").attr("href", "../css/wide.css"); 
+       $("#size-stylesheet").attr("href", "css/wide.css"); 
     }
+}
+
+function adjustSideShadows(width) {
+    width = (parseInt(width)/2) - 200;
+    $(".hover-left").css("width", width-2);
+    $(".hover-right").css("width", width+2);
 }
 
 /*global Sly, console */
@@ -38,14 +44,13 @@ jQuery(function ($) {
 			smart: 1,
 			activateOn: 'click',
 			activateMiddle: 1,
-                        dragSource: '#crazy',
+            dragSource: '#crazy',
 			mouseDragging: 1,
 			touchDragging: 1,
 			releaseSwing: 1,
 			startAt: 1,  // start at location for #crazy
 			scrollBar: '#scrollbar',
 			scrollBy: 1,
-			//pagesBar: $wrap.find('.pages'),
 			activatePageOn: 'click',
 			speed: 300,
 			elasticBounds: 1,
@@ -54,14 +59,6 @@ jQuery(function ($) {
 			dynamicHandle: 1,
 			clickBar: 1,
 			keyboardNavBy: 'items',
-
-			// Buttons
-			/*forward: $wrap.find('.forward'),
-			backward: $wrap.find('.backward'),
-			prev: $wrap.find('.prev'),
-			next: $wrap.find('.next'),
-			prevPage: $wrap.find('.prevPage'),
-			nextPage: $wrap.find('.nextPage')*/
 		};
 	var frame = new Sly('#crazy', options);
 
@@ -73,9 +70,9 @@ jQuery(function ($) {
 		var tempdat = data[slyLength-activeItem];
 		
 		if ( tempdat == 'year' ) {
-			$('#hover').stop(true,true).fadeOut('fast', function() {});
+			$('.hover').stop(true,true).fadeOut('fast', function() {});
 		} else {
-			$('#hover').stop(true,true).fadeIn('fast', function() {});
+			$('.hover').stop(true,true).fadeIn('fast', function() {});
 			$('#hover-inner').html(tempdat);
 		}
 	});
@@ -86,7 +83,8 @@ jQuery(function ($) {
         // Reload on resize
 	$(window).on('resize', function () {
 		frame.reload();
-                adjustStyle($(this).width());
+        adjustStyle($(this).width());
+        adjustSideShadows($(this).width());
 	});
 
 });
@@ -94,4 +92,5 @@ jQuery(function ($) {
 
 $(window).ready(function() {
   adjustStyle($(this).width());
+  adjustSideShadows($(this).width())
 });
