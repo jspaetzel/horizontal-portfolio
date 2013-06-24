@@ -1,24 +1,3 @@
-var data = new Array();
-data = [
-		"year",
-		
-		"Chemical Servers","year",
-		
-		"Lifeguard","year",
-		
-		"THT","JCC","3D Dots","year",
-		
-		"GSST","Jamestown","Jitterzz","Restore","2113","IMH","year",
-		
-		"Pheme","ODU OUT","Java Tetris","LowEndBox","year",
-		
-		"Minecraft Dev","Mobile Menus","Centration","TSA","year",
-		
-		"ODU","year",
-		
-		"About"
-		]
-
 function adjustStyle(width) {
     width = parseInt(width);
     if (width < 701) {
@@ -60,21 +39,17 @@ jQuery(function ($) {
 			clickBar: 1,
 			keyboardNavBy: 'items',
 		};
-	var frame = new Sly('#crazy', options);
-
-	frame.on('active', function(eventName) {
+        var frame = new Sly('#crazy', options);
+        frame.on('active', function(eventName) {
 		
-		// Determine item to load up
-		var activeItem = this.rel['activeItem'];
-		var slyLength = this.items.length-1;
-		var tempdat = data[slyLength-activeItem];
-		
-		if ( tempdat == 'year' ) {
+		// Dim the sides
+		if ( $('.active').hasClass('year') ) {
 			$('.hover').stop(true,true).fadeOut('fast', function() {});
 		} else {
 			$('.hover').stop(true,true).fadeIn('fast', function() {});
-			$('#hover-inner').html(tempdat);
 		}
+        
+        
 	});
 	
 	// Initiate frame

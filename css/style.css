@@ -107,27 +107,29 @@ h4 {
 /* Types */
 
 .crazy .web {
-	background:#B6FF81; /* green */
+	background:#DFFF80; /* green */
 }
 
 .crazy .code {
-	background: #F8FF81; /* yellow */
+	background: #CB9FDF; /* yellow */
 }
 
 .crazy .employ {
-	background: #FF81A2; /* berry */
+	background: #FF8080; /* berry */
 }
 
 .crazy .edu {
-	background: #FFD181; /* orange */
+	background: #8ED6F0; /* orange */
 }
 
 .crazy .unknown {
-	background: #81A1FF; /* blue? not sure what to use this color for */
+	background: #FFD680; /* blue? not sure what to use this color for */
 }
 
 .crazy img {
 	float: left;
+    padding: 10px;
+    max-width: 380px;
 	}
 
 /* Hover Content */
@@ -146,4 +148,45 @@ h4 {
     top:0;
     background: rgba(51, 51, 51, 0.85);
     text-align:left;
+}
+
+
+/* Unique's */
+#about, #about img {
+    padding: 0px;
+}
+#odu {
+    background: url('../img/back/code.png');
+}
+
+#tsa {
+    background: url('../img/back/tsa.jpg');
+    color: #FFF;
+}
+#centration {
+    background: url('../img/back/centration.jpg');
+}
+#minecraft {
+    background: url('../img/back/minecraft.jpg');
+}
+#inmotionhosting {
+    background: #FFF;
+}
+#jamestownhs {
+    background: #FFF;
+
+}
+#a2113 {
+    background: #f9f6e5;
+}
+#jitterzz {
+    background: url('../img/back/jitterzz.jpg');
+}
+#restore {
+    background: url('../img/back/restore.jpg');
+}
+#dots {
+    color: #FFF;
+    background: url('../img/back/dots.jpg') no-repeat #000;
+    background-position: center bottom;
 }
