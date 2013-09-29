@@ -1,5 +1,6 @@
 * { 
-    margin: 0; 
+    margin: 0;
+    padding: 0; 
 }
 
 html, body { 
@@ -20,7 +21,6 @@ h1 {
 	font-size: 40px;
 	padding-bottom: 20px;
 	padding-top: 20px;
-	border-bottom: 5px solid #333;
 }
 
 h4 {
@@ -43,17 +43,17 @@ h4 {
 	height: 100%;
 	overflow: hidden;
 }
-.frame ul {
+.frame .items {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	height: 100%;
 }
-.frame ul li {
+.frame .item {
 	float: left;
 	width: 400px;
 	height: 100%;
-	margin: 0 4px 0 0;
+	margin: 0 0 0 0;
 	padding: 0;
 	color: #333;
 	text-align: center;
@@ -67,7 +67,7 @@ h4 {
 	float: left;
 	width: 32px;
 	height: 100%;
-	margin: 0 4px 0 100px;
+	margin: 0 0px 0 20px;
 	padding: 0;
 	text-align: center;
 }
@@ -94,7 +94,7 @@ h4 {
 #scrollbar .handle {
 	width: 100px;
 	height: 100%;
-	background: rgb(146, 146, 146);;
+	background: rgb(146, 146, 146);
 	cursor: pointer;
 }
 #scrollbar .handle .mousearea {
@@ -127,10 +127,12 @@ h4 {
 }
 
 .crazy img {
-	float: left;
+    float: left;
     padding: 10px;
     max-width: 380px;
 	}
+    
+
 
 /* Hover Content */
 
@@ -163,18 +165,35 @@ h4 {
     background: url('../img/back/tsa.jpg');
     color: #FFF;
 }
+#tsa img {
+    padding: 0;
+}
 #centration {
-    background: url('../img/back/centration.jpg');
+    background: url('../img/back/centration.jpg') right;
 }
 #minecraft {
-    background: url('../img/back/minecraft.jpg');
+    background: url('../img/back/minecraft.jpg') right top;
+}
+#empireavenue {
+    background: #FFF;
+}
+#tetris {
+    background: #FFF;
 }
 #inmotionhosting {
     background: #FFF;
 }
 #jamestownhs {
     background: #FFF;
-
+}
+#gsst {
+    background: #FFF;
+}
+#oduout {
+    background: #FFF;
+}
+#pheme {
+    background: #f51e1e;
 }
 #a2113 {
     background: #f9f6e5;
@@ -189,4 +208,47 @@ h4 {
     color: #FFF;
     background: url('../img/back/dots.jpg') no-repeat #000;
     background-position: center bottom;
+}
+#jcc {
+    background: #FFF;
+}
+#wcusa {
+    background: #FFF;
+}
+#tht {
+    background: #eeeff1;
+}
+#cs {
+    background: #2a85e8;
+}
+
+/* floating */
+.floating {
+    position: relative;
+    list-style: none;
+}
+
+.floating div {
+    height: 50%;
+    margin: 25px;
+    margin-right: 0;
+    border: 5px solid #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.floating div img {
+    opacity: 0.95;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    float: none;
+    max-width: 300px;
+}
+
+.floating div h1 {
+    bottom: 0;
+    left: 25;
+    position: absolute;
+    float: none;
 }

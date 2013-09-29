@@ -5,12 +5,12 @@ function adjustStyle(width) {
     } else {
        $("#size-stylesheet").attr("href", "css/wide.css"); 
     }
-}
-
-function adjustSideShadows(width) {
-    width = (parseInt(width)/2) - 200;
-    $(".hover-left").css("width", width-2);
-    $(".hover-right").css("width", width+2);
+    
+    $('.frame .item').height($(window).height()-15); // remove bar from it
+    
+    var newHeight = $('.frame .item').height()/2;
+    var heightStyle = 40+10+10; // margin, padding, border
+    $('.frame .item div').height(newHeight - heightStyle);
 }
 
 /*global Sly, console */
@@ -59,7 +59,6 @@ jQuery(function ($) {
 	$(window).on('resize', function () {
 		frame.reload();
         adjustStyle($(this).width());
-        adjustSideShadows($(this).width());
 	});
 
 });
@@ -67,5 +66,4 @@ jQuery(function ($) {
 
 $(window).ready(function() {
   adjustStyle($(this).width());
-  adjustSideShadows($(this).width())
 });
