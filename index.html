@@ -39,6 +39,7 @@
                         <div class="tags">
                             <span class="tag light-fg dark-bg">Class of 2015</span>
                         </div>
+                        <div class="info">TEST</div>
                     </div>
                     <div id="centration">
                         <img alt="Centration" src="img/proj/centration.png">
@@ -119,6 +120,15 @@
             </div>
         </div>
     </div>
-    
+<script>
+// script for background text
+jQuery('.floating div').hover(function() {
+    $(this).find('img').stop().fadeTo(300,0); // hide image
+    $(this).find('.info').stop().fadeTo(600,1); // 
+}, function() {
+    $(this).find('img').stop().fadeTo(600,1);
+    $(this).find('.info').stop().fadeTo(300,0);
+});
+</script>
 </body>
 </html>

@@ -160,6 +160,7 @@ h4 {
 }
 #odu {
     background: url('../img/back/code.png');
+    
 }
 
 #tsa {
@@ -233,7 +234,6 @@ h4 {
     margin: 30px;
     border-radius: 1px;
     box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.2);   
-    padding: 8px; 
     position: relative;
     overflow: hidden;
 }
@@ -292,4 +292,9 @@ h4 {
 .tag i {
     position: relative;
     padding: 0 9px;
+}
+
+/* Hidden element with more information */
+.info {
+    opacity: 0;
 }

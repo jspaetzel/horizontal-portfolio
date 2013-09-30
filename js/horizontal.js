@@ -1,19 +1,22 @@
 function adjustStyle(width) {
+    
     width = parseInt(width);
+    var scrollbarHeight = 15;
     if (width < 701) {
+        scrollbarHeight = 50;
         $("#size-stylesheet").attr("href", "css/narrow.css");
     } else {
        $("#size-stylesheet").attr("href", "css/wide.css"); 
     }
     
-    $('.frame .item').height($(window).height()-15); // remove bar from it
-    $('.year').height($(window).height()-15); // adjust year bar
+    
+    
+    $('.frame .item').height($(window).height()-scrollbarHeight); // remove bar from it
+    $('.year').height($(window).height()-scrollbarHeight); // adjust year bar
     
     var newHeight = $('.frame .item').height()/2;
     var heightStyle = 40+10+10; // margin, padding, border
-    $('.frame .item div').height(newHeight - heightStyle);
-    
-    
+    $('.frame .item div').height(newHeight - heightStyle);    
 }
 
 /*global Sly, console */
