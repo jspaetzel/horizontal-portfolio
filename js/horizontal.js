@@ -7,10 +7,13 @@ function adjustStyle(width) {
     }
     
     $('.frame .item').height($(window).height()-15); // remove bar from it
+    $('.year').height($(window).height()-15); // adjust year bar
     
     var newHeight = $('.frame .item').height()/2;
     var heightStyle = 40+10+10; // margin, padding, border
     $('.frame .item div').height(newHeight - heightStyle);
+    
+    
 }
 
 /*global Sly, console */

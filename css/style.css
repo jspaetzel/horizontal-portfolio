@@ -5,7 +5,7 @@
 
 html, body { 
     	height: 100%; 
-    	background: url('../img/worn_dots.png') #e8e8e8; 
+    	background: url('../img/gplaypattern.png') #e8e8e8; 
     	font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
     }
 
@@ -88,7 +88,7 @@ h4 {
 #scrollbar {
 	position: relative;
 	height: 15px;
-	background: #ccc;
+	background: rgba(51, 51, 51, 0.2);
 	line-height: 0;
 }
 #scrollbar .handle {
@@ -175,28 +175,28 @@ h4 {
     background: url('../img/back/minecraft.jpg') right top;
 }
 #empireavenue {
-    background: #FFF;
+    background: rgba(255, 255, 255, 0.80);
 }
 #tetris {
-    background: #FFF;
+    background: rgba(255, 255, 255, 0.80);
 }
 #inmotionhosting {
-    background: #FFF;
+    background: rgba(255, 255, 255, 0.80);
 }
 #jamestownhs {
-    background: #FFF;
+    background: rgba(255, 255, 255, 0.80);
 }
 #gsst {
-    background: #FFF;
+    background: rgba(255, 255, 255, 0.80);
 }
 #oduout {
-    background: #FFF;
+    background: rgba(255, 255, 255, 0.80);
 }
 #pheme {
-    background: #f51e1e;
+    background: rgba(245, 30, 30, 1);
 }
 #a2113 {
-    background: #f9f6e5;
+    background: rgba(249, 246, 229, 0.75);
 }
 #jitterzz {
     background: url('../img/back/jitterzz.jpg');
@@ -210,16 +210,16 @@ h4 {
     background-position: center bottom;
 }
 #jcc {
-    background: #FFF;
+    background: rgba(255, 255, 255, 0.80);
 }
 #wcusa {
-    background: #FFF;
+    background: rgba(255, 255, 255, 0.80);
 }
 #tht {
-    background: #eeeff1;
+    background: rgba(238, 239, 241, 0.80);
 }
 #cs {
-    background: #2a85e8;
+    background: rgba(42, 133, 232, 0.75);
 }
 
 /* floating */
@@ -232,7 +232,9 @@ h4 {
     height: 50%;
     margin: 25px;
     margin-right: 0;
-    border: 5px solid #000;
+    border-radius: 1px;
+    box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.2);   
+    padding: 8px; margin: 30px;
     position: relative;
     overflow: hidden;
 }
@@ -251,4 +253,12 @@ h4 {
     left: 25;
     position: absolute;
     float: none;
+}
+
+/* TAGS */
+
+.github {
+}
+
+.link {
 }
