@@ -67,7 +67,7 @@ h4 {
 	float: left;
 	width: 32px;
 	height: 100%;
-	margin: 0 0px 0 20px;
+	margin: 0 20px 0 20px;
 	padding: 0;
 	text-align: center;
 }
@@ -82,6 +82,7 @@ h4 {
 	position: relative;
 	font-size: 32px;
 	top: 25px;
+    right: 1;
 }
 
 /* Scrollbar */
@@ -228,27 +229,26 @@ h4 {
     list-style: none;
 }
 
-.floating div {
-    height: 50%;
-    margin: 25px;
-    margin-right: 0;
+.floating > div {
+    margin: 30px;
     border-radius: 1px;
     box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.2);   
-    padding: 8px; margin: 30px;
+    padding: 8px; 
     position: relative;
     overflow: hidden;
 }
 
-.floating div img {
+.floating > div img {
     opacity: 0.95;
     bottom: 0;
     left: 0;
     position: absolute;
     float: none;
     max-width: 300px;
+    pointer-events:none;
 }
 
-.floating div h1 {
+.floating > div h1 {
     bottom: 0;
     left: 25;
     position: absolute;
@@ -256,9 +256,40 @@ h4 {
 }
 
 /* TAGS */
-
-.github {
+.tags {
+    position: absolute;
+    top:10;
+    right: 0;
+}
+.tag {
+    display: block;
+    position: relative;
+    margin-top: 16px;
+    padding: 3px;
+    text-decoration:none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    
 }
 
-.link {
+.dark-bg {
+    background: rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 0px 6px rgba(156, 156, 156, 0.2);
+    
+}
+.dark-fg {
+    color: #000;
+}
+
+.light-bg {
+    background: rgba(255,255,255,0.25);
+    box-shadow: 0px 0px 0px 6px rgba(156, 156, 156, 0.2);
+}
+.light-fg {
+    color: #FFF;
+}
+
+.tag i {
+    position: relative;
+    padding: 0 9px;
 }
