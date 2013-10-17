@@ -18,19 +18,10 @@ html, body {
     }
     
 h1 {
-	font-size: 40px;
-	padding-top: 20px;
-}
-
-h4 {
+    padding-top: 20px;
 	font-family: 'Nothing You Could Do', cursive;
 	font-weight: 400;
-	font-size: 26px;
-	text-align: center;
-	color: #FFF;
-	bottom: 20;	
-	right: 10;
-	position: absolute;
+	font-size: 42px;
 }
     
 .frame {
